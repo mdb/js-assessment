@@ -25,7 +25,17 @@ define(function() {
     },
 
     remove : function(arr, item) {
+      var newArr = [],
+          arrLength = arr.length,
+          i;
 
+      for (i = 0; i < arrLength; i++) {
+        if (arr[i] !== item) {
+          newArr.push(arr[i]);
+        }
+      }
+
+      return newArr;
     },
 
     append : function(arr, item) {
