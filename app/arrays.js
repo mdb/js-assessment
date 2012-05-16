@@ -61,7 +61,11 @@ define(function() {
     },
 
     insert : function(arr, item, index) {
+      var newArr = arr;
 
+      newArr.splice(index, 0, item);
+
+      return newArr;
     },
 
     count : function(arr, item) {
