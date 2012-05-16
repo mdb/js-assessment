@@ -47,11 +47,17 @@ define(function() {
     },
 
     truncate : function(arr) {
+      var newArr = arr;
 
+      newArr.pop();
+
+      return newArr;
     },
 
     concat : function(arr1, arr2) {
+      var newArr = arr1.concat(arr2);
 
+      return newArr;
     },
 
     insert : function(arr, item, index) {
