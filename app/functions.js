@@ -61,7 +61,12 @@ define(function() {
     },
 
     curryIt : function() {
+      var origFn = arguments[0],
+          args = Array.prototype.slice.call(arguments, 1);
 
+      return function() {
+        return origFn.apply(this, args.concat(Array.prototype.slice.call(arguments)));
+      }
     },
 
     makeClosures : function() {
