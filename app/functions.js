@@ -15,7 +15,11 @@ define(function() {
     },
 
     functionFunction : function() {
+      var args = arguments;
 
+      return function (param) {
+        return args[0] + ', ' + param;
+      };
     },
 
     partial : function() {
