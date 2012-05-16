@@ -22,8 +22,17 @@ define(function() {
       };
     },
 
-    partial : function() {
-
+    partial : function(origFn) {
+      var fn = origFn,
+          context = this,
+          args = Array.prototype.slice.call(arguments, 1); //arguments is enought of an array for this to work
+      
+      return function () {
+        for (var i=0; i<arguments.length; i++) {
+          args.push(arguments[i]);
+        }
+        return fn.apply(context, args);
+      };
     },
 
     useArguments : function() {
