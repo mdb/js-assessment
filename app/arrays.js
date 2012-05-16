@@ -83,7 +83,29 @@ define(function() {
     },
 
     duplicates : function(arr) {
+      var current,
+          dups = [];
+          
+      for (var i=0; i<arr.length; i++) {
+        current = arr[i];
+        for (var j=0; j<arr.length; j++) {
+          if (i !== j && arr[i] === arr[j]) {
+            var documented = false;
 
+            for (var k=0; k<dups.length; k++) {
+              if (current === dups[k]) {
+                documented = true;
+              }
+            }
+
+            if (documented === false) {
+              dups.push(current); 
+            }
+          }
+        }
+      }
+
+      return dups;
     },
 
     square : function(arr) {
