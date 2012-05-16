@@ -69,7 +69,17 @@ define(function() {
     },
 
     count : function(arr, item) {
+      var count = 0,
+          arrLength = arr.length,
+          i;
 
+      for (i = 0; i < arrLength; i++) {
+        if (arr[i] === item) {
+          count = count + 1;
+        }
+      }
+
+      return count;
     },
 
     duplicates : function(arr) {
