@@ -7,7 +7,9 @@ define(function() {
     },
 
     alterObjects : function(constructor) {
+      var c = constructor;
 
+      c.prototype.greeting = arguments[1];
     },
 
     iterate : function(obj) {
