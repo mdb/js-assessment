@@ -13,7 +13,16 @@ define(function() {
     },
 
     iterate : function(obj) {
+      var result = [],
+          key;
 
+      for (key in obj) {
+        if (obj.hasOwnProperty(key)) {
+          result.push(key + ': ' + obj[key]);
+        }
+      }
+
+      return result;
     }
   };
 });
