@@ -36,7 +36,15 @@ define(function() {
     },
 
     useArguments : function() {
+      var total = 0,
+          argsLength = arguments.length,
+          i;
 
+      for (i=0; i<argsLength; i++) {
+        total = total + arguments[i];
+      }
+
+      return total;
     },
 
     callIt : function() {
