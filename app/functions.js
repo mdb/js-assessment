@@ -69,8 +69,19 @@ define(function() {
       }
     },
 
-    makeClosures : function() {
+    makeClosures : function(arr) {
+      var funcsArr = [],
+          funcBuilder = function (val) {
+            return function () {
+              return val * val;
+            }
+          };
 
+      for (var i=0; i<arr.length; i++) {
+        funcsArr.push(funcBuilder(arr[i]));
+      }
+
+      return funcsArr;
     }
   };
 });
