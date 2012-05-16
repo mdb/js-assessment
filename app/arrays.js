@@ -39,7 +39,11 @@ define(function() {
     },
 
     append : function(arr, item) {
+      var newArr = arr;
 
+      newArr.push(item);
+
+      return newArr;
     },
 
     truncate : function(arr) {
