@@ -121,7 +121,19 @@ define(function() {
     },
 
     findAllOccurrences : function(arr, target) {
+      var arrLength = arr.length,
+          i,
+          positions = [];
 
+      for (i=0; i<arrLength; i++) {
+        if (arr[i] === target) {
+          positions.push(i);
+        }
+      }
+      
+      positions.join(' ');
+
+      return positions;
     }
   };
 });
