@@ -14,7 +14,14 @@ define(function() {
     },
 
     sum : function(arr) {
+      var total = 0,
+          i;
 
+      for (i in arr) {
+        total += arr[i]
+      }
+
+      return total;
     },
 
     remove : function(arr, item) {
