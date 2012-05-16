@@ -48,7 +48,16 @@ define(function() {
     },
 
     callIt : function() {
+      var fn = arguments[0],
+          args = [],
+          argsLength = arguments.length,
+          i;
 
+      for (i=1; i<argsLength; i++) {
+        args.push(arguments[i]);
+      }
+
+      return fn.apply(null, args);
     },
 
     curryIt : function() {
