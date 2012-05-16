@@ -109,7 +109,15 @@ define(function() {
     },
 
     square : function(arr) {
+      var newArr = [],
+          arrLength = arr.length,
+          i;
 
+      for (i=0; i<arrLength; i++) {
+        newArr.push(arr[i] * arr[i]);
+      }
+
+      return newArr;
     },
 
     findAllOccurrences : function(arr, target) {
