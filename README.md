@@ -1,3 +1,5 @@
+<img src="https://secure.travis-ci.org/mdb/js-assessment.png"/>
+
 # A test-driven JS assessment
 
 This repository contains my solutions to Rebecca Murphey's
