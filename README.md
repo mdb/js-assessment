@@ -1,4 +1,4 @@
-# A test-driven JS assessment [travis]: https://secure.travis-ci.org/mdb/js-assessment.png
+# A test-driven JS assessment <img src="https://secure.travis-ci.org/mdb/js-assessment.png" />
 
 This repository contains my solutions to Rebecca Murphey's
 [js-assessment](https://github.com/rmurphey/js-assessment), "a set
