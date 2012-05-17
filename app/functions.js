@@ -25,7 +25,7 @@ define(function() {
     partial : function(origFn) {
       var fn = origFn,
           context = this,
-          args = Array.prototype.slice.call(arguments, 1); //arguments is enought of an array for this to work
+          args = Array.prototype.slice.call(arguments, 1);
       
       return function () {
         for (var i=0; i<arguments.length; i++) {
