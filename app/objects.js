@@ -6,7 +6,7 @@ define(function() {
       return fn.call(obj);
     },
 
-    alterObjects : function(constructor) {
+    alterObjects : function(constructor, greeting) {
       var c = constructor;
 
       c.prototype.greeting = arguments[1];

@@ -11,7 +11,7 @@ define([
         };
 
     it("you should be able to use an array as arguments when calling a function", function() {
-      var result = answers.argsAsArray([ 'Hello', 'Ellie', '!' ]);
+      var result = answers.argsAsArray(sayIt, [ 'Hello', 'Ellie', '!' ]);
       expect(result).to.be('Hello, Ellie!');
     });
 
@@ -33,6 +33,7 @@ define([
     it("you should be able to return a function from a function", function() {
       // define a function for fn so that the following will pass
       expect(answers.functionFunction('Hello')('world')).to.be('Hello, world');
+      expect(answers.functionFunction('Hai')('can i haz funxtion?')).to.be('Hai, can i haz funxtion?');
     });
 
     it("you should be able to create a 'partial' function", function() {
@@ -104,7 +105,7 @@ define([
 
       doSomeStuff = function (x) { return x * x; };
 
-      var funcs = answers.makeClosures(arr);
+      var funcs = answers.makeClosures(arr, doSomeStuff);
       expect(funcs).to.have.length(arr.length);
 
       _.each(funcs, function(func, i) {
