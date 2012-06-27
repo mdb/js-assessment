@@ -58,27 +58,28 @@ define(function() {
     },
 
     curryIt : function(fn) {
-      var origFn = arguments[0],
-          args = Array.prototype.slice.call(arguments, 1);
+      var args = Array.prototype.slice.call(arguments, 1);
 
       return function() {
-        return origFn.apply(this, args.concat(Array.prototype.slice.call(arguments)));
+        return fn.apply(this, args.concat(Array.prototype.slice.call(arguments)));
       }
     },
 
     makeClosures : function(arr, fn) {
-      var funcsArr = [],
-          funcBuilder = function (val) {
-            return function () {
-              return val * val;
-            }
+      var arrLength = arr.length,
+          i,
+          newArr = [],
+          closure = function (arg) {
+            return function() {
+              return fn(arg);
+            };
           };
 
-      for (var i=0; i<arr.length; i++) {
-        funcsArr.push(funcBuilder(arr[i]));
+      for (i=0; i<arrLength; i++) {
+        newArr.push(closure(arr[i]));
       }
 
-      return funcsArr;
+      return newArr;
     }
   };
 });
