@@ -14,17 +14,15 @@ define(function() {
       return fn.call(obj);
     },
 
-    functionFunction : function() {
-      var args = arguments;
+    functionFunction : function(str) {
 
       return function (param) {
-        return args[0] + ', ' + param;
+        return str + ', ' + param;
       };
     },
 
-    partial : function(origFn) {
-      var fn = origFn,
-          context = this,
+    partial : function(fn, str1, str2) {
+      var context = this,
           args = Array.prototype.slice.call(arguments, 1);
       
       return function () {
@@ -47,9 +45,8 @@ define(function() {
       return total;
     },
 
-    callIt : function() {
-      var fn = arguments[0],
-          args = [],
+    callIt : function(fn) {
+      var args = [],
           argsLength = arguments.length,
           i;
 
@@ -60,7 +57,7 @@ define(function() {
       return fn.apply(null, args);
     },
 
-    curryIt : function() {
+    curryIt : function(fn) {
       var origFn = arguments[0],
           args = Array.prototype.slice.call(arguments, 1);
 
@@ -69,7 +66,7 @@ define(function() {
       }
     },
 
-    makeClosures : function(arr) {
+    makeClosures : function(arr, fn) {
       var funcsArr = [],
           funcBuilder = function (val) {
             return function () {
