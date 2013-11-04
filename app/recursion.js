@@ -1,12 +1,12 @@
 if (typeof define !== 'function') { var define = require('amdefine')(module); }
 
-define([ 'jquery' ], function($) {
+define(function() {
   return {
-    async : function(value) {
+    listFiles: function(data, dirName) {
 
     },
 
-    manipulateRemoteData : function(url) {
+    permute: function(arr) {
 
     }
   };

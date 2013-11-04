@@ -38,6 +38,10 @@ define(function() {
       return newArr;
     },
 
+    removeWithoutCopy : function(arr, item) {
+
+    },
+
     append : function(arr, item) {
       var newArr = arr;
 
@@ -52,6 +56,14 @@ define(function() {
       newArr.pop();
 
       return newArr;
+    },
+
+    prepend : function(arr, item) {
+
+    },
+
+    curtail : function(arr) {
+
     },
 
     concat : function(arr1, arr2) {
