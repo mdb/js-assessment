@@ -75,7 +75,7 @@ define(function() {
     },
 
     curtail : function(arr) {
-
+      return arr.slice(1);
     },
 
     concat : function(arr1, arr2) {
