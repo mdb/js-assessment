@@ -89,7 +89,17 @@ define(function() {
     },
 
     count : function(arr, item) {
+      var length = arr.length,
+          count = 0,
+          i;
 
+      for (i=0; i<length; i++) {
+        if (arr[i] === item) {
+          count++;
+        }
+      }
+
+      return count;
     },
 
     duplicates : function(arr) {
