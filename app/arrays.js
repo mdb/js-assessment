@@ -63,7 +63,9 @@ define(function() {
     },
 
     truncate : function(arr) {
+      arr.pop();
 
+      return arr;
     },
 
     prepend : function(arr, item) {
