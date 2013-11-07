@@ -69,7 +69,9 @@ define(function() {
     },
 
     prepend : function(arr, item) {
+      var newArr = [item];
 
+      return newArr.concat(arr);
     },
 
     curtail : function(arr) {
