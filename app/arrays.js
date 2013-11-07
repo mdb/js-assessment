@@ -44,7 +44,16 @@ define(function() {
     },
 
     removeWithoutCopy : function(arr, item) {
+      var length = arr.length,
+          i;
 
+      for (i=0; i<length; i++) {
+        while (item === arr[i]) {
+          arr.splice(i, 1);
+        }
+      }
+
+      return arr;
     },
 
     append : function(arr, item) {
