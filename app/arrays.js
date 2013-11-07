@@ -18,7 +18,15 @@ define(function() {
     },
 
     sum : function(arr) {
+      var length = arr.length,
+          sum = 0,
+          i;
 
+      for (i=0; i<length; i++) {
+        sum += arr[i];
+      }
+
+      return sum;
     },
 
     remove : function(arr, item) {
