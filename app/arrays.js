@@ -79,7 +79,7 @@ define(function() {
     },
 
     concat : function(arr1, arr2) {
-
+      return arr1.concat(arr2);
     },
 
     insert : function(arr, item, index) {
