@@ -30,7 +30,17 @@ define(function() {
     },
 
     remove : function(arr, item) {
+      var result = [],
+          length = arr.length,
+          i;
 
+      for (i=0; i<length; i++) {
+        if (item !== arr[i]) {
+          result.push(arr[i]);
+        }
+      }
+
+      return result;
     },
 
     removeWithoutCopy : function(arr, item) {
